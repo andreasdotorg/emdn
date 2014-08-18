@@ -14,7 +14,7 @@ socket  = context.socket(zmq.SUB)
 socket.connect("tcp://firehose.elite-market-data.net:9050")
 socket.setsockopt(zmq.SUBSCRIBE, "")
 publisher = context.socket(zmq.PUSH)
-publisher.connect("tcp://localhost:8500")
+publisher.connect("tcp://collector.elite-market-data.net:8500")
 
 while True:
     data      = socket.recv()
