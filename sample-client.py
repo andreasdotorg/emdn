@@ -7,7 +7,7 @@ def main():
     context = zmq.Context()
     subscriber = context.socket(zmq.SUB)
 
-    subscriber.connect('tcp://localhost:9500')
+    subscriber.connect('tcp://firehose.elite-market-data.net:9500')
     subscriber.setsockopt(zmq.SUBSCRIBE, "")
 
     while True:
