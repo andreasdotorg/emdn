@@ -2,7 +2,7 @@ import zlib
 import zmq
 import requests
 
-elasticsearch_url="http://localhost:9200/emdn/message"
+elasticsearch_url="http://localhost:9200/emdn/marketquote"
 
 def main():
     context = zmq.Context()
